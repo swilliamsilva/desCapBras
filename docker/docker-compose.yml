@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+  postgresql:
+    image: postgres:alpine
+    container_name: desCapBras-postgresql
+    environment:
+      - POSTGRES_DB=desCapBras
+      - POSTGRES_PASSWORD=development
+    ports:
+      - 5432:5432
+    volumes:
+      - desCapBras:/var/lib/postgresql/data
+volumes:
+  desCapBras:
